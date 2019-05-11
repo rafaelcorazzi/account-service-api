@@ -10,10 +10,10 @@ config :account_api,
   ecto_repos: [AccountApi.Repo]
 
 # Configures the endpoint
-config :account_api, AccountApi.Endpoint,
+config :account_api, AccountApiWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "LBEI9Bg2L7N0G3ZcfW71MOYaV7nnthPvmbeVquFOHYgiqBo5DgUglzcFKcFUvq5j",
-  render_errors: [view: AccountApi.ErrorView, accepts: ~w(json)],
+  render_errors: [view: AccountApiWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: AccountApi.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

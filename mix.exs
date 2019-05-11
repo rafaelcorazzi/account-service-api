@@ -4,7 +4,7 @@ defmodule AccountApi.Mixfile do
   def project do
     [app: :account_api,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.4",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -17,9 +17,10 @@ defmodule AccountApi.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {AccountApi, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+    [
+    mod: {AccountApi.Application, []},
+      extra_applications: [:logger, :runtime_tools]
+    ]
   end
 
   # Specifies which paths to compile per environment.
@@ -33,9 +34,11 @@ defmodule AccountApi.Mixfile do
     [{:phoenix, "~> 1.2.5"},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.0"},
+     {:cors_plug, "~> 1.5.0"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
      {:dotenv, "~> 3.0.0"},
+     {:poolboy, "~> 1.5"},
      {:cowboy, "~> 1.0"}]
   end
 

@@ -25,10 +25,10 @@ defmodule AccountApi.ConnCase do
       import Ecto.Changeset
       import Ecto.Query
 
-      import AccountApi.Router.Helpers
+      import AccountApiWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint AccountApi.Endpoint
+      @endpoint AccountApiWeb.Endpoint
     end
   end
 
