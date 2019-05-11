@@ -2,4 +2,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 # Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
- *.* linguist-language=Java
+ *.* linguist-language=Elixir
