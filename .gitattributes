@@ -3,3 +3,4 @@
 * text=auto
 # Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
 *.exs linguist-language=Elixir
+*.ex linguist-language=Elixir
