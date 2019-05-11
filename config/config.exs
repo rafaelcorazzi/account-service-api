@@ -12,7 +12,7 @@ config :account_api,
 # Configures the endpoint
 config :account_api, AccountApi.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "XqTx4vXm//kzZyfUqvLIeK5cY+YB97dTEUVNFHQMng159vbQrwWW7A0nkt86mECl",
+  secret_key_base: "LBEI9Bg2L7N0G3ZcfW71MOYaV7nnthPvmbeVquFOHYgiqBo5DgUglzcFKcFUvq5j",
   render_errors: [view: AccountApi.ErrorView, accepts: ~w(json)],
   pubsub: [name: AccountApi.PubSub,
            adapter: Phoenix.PubSub.PG2]
