@@ -1,12 +1,9 @@
 defmodule AccountApiWeb.AccountView do
     use AccountApiWeb, :view
-    alias AccountApiWeb.AccountView
+    #alias AccountApiWeb.AccountView
   
     
-  
-    def render("show.json", %{business: business}) do
-      %{data: render_one(business, BusinessView, "business.json")}
+    def render("index.json", %{recharge_limit: limits}) do
+        limits
     end
-  
-    
-  end
+ end

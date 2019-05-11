@@ -15,8 +15,10 @@ defmodule AccountApiWeb.AccountController do
     end
 
     def list(conn, _) do
-        business = Account.list_recharge_limits()
-        
-        json(conn, %{companies: business})
+        limits = Account.list_recharge_limits()
+        conn
+        |> put_status(:ok)
+        |> put_resp_header("content-type", "application/json")
+        |> render("index.json", recharge_limit: limits)
     end
 end
