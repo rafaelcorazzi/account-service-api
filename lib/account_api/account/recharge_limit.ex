@@ -1,7 +1,7 @@
 defmodule AccountApi.Account.RechargeLimit do
   use Ecto.Schema
   import Ecto.Changeset
-  #@primary_key {:id, :binary_id, autogenerate: true}
+  @primary_key {:id, :binary_id, autogenerate: true}
 
   schema "recharge_limit" do
     field :company_id, :integer, size: 9, null: false
