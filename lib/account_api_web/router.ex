@@ -7,7 +7,8 @@ defmodule AccountApiWeb.Router do
 
     scope "/", AccountApiWeb do
       pipe_through :api
-      get "/businesses", AccountController, :list
+      resources "/limit", AccountController, only: [:create]
+      get "/limit", AccountController, :list
       get "/", AccountController, :index
     end
 end

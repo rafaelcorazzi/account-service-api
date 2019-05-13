@@ -4,7 +4,7 @@ defmodule AccountApi.Repo.Migrations.AddRechargeLimitTable do
   def change do
     create table("recharge_limit", primary_key: false) do
       add :id, :uuid, primary_key: true, default: fragment("uuid_generate_v4()")
-      add :company_id, :integer
+      add :account_id, :uuid
       add :start_at, :datetime
       add :end_at, :datetime
       add :amount, :decimal, precision: 18, scale: 2
